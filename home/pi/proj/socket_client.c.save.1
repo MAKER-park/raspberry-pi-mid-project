@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <netdb.h>		//프로토콜 및 호스트 이름을 숫자 주소로 변환하는 기능을 정의. 로컬 데이터와 DNS를 검색
-#include <sys/socket.h>		// 소켓 사용 함수
-#include <netinet/in.h>		//AF_INET 및 AF_INET6 주소 패밀리. 인터넷에서 널리 사용되는 IP 주소와 TCP / UDP 포트 번호가 포함
-#include <arpa/inet.h>		//숫자로 IP 주소를 조작하는 기능의 정의
+#include <netdb.h>//프로토콜 및 호스트 이름을 숫자 주소로 변환하는 기능을 정의. 로컬 데이터와 DNS를 검색
+#include <sys/socket.h>// 소켓 사용 함수
+#include <netinet/in.h>//AF_INET 및 AF_INET6 주소 패밀리. 인터넷에서 널리 사용되는 IP 주소와 TCP / UDP 포트 번호가 포함
+#include <arpa/inet.h>//숫자로 IP 주소를 조작하는 기능의 정의
 
 #include <wiringPi.h>
 
@@ -21,18 +21,19 @@
 int srcSocket;
 int dstSocket;
 
-				// sockaddr_in 구조체
+// sockaddr_in 구조체
 struct sockaddr_in s_addr;
 struct sockaddr_in c_addr;
-socklen_t len;			//소켓길이 및 크기 값
+socklen_t len;//소켓길이 및 크기 값
 
-				//char textdata[11]="01234567890";
+//char textdata[11]="01234567890";
 char buf[BUFSIZE];
 
 void server_init(){
 	//--소켓 생성--
 	if((srcSocket = socket(AF_INET,SOCK_STREAM,0))<0){
-		//socket:소켓 생성함수
+		//socket:소켓 생성함수(int socket(int domain, int type, int protocol))
+		// 반환 실패시 -1  반환 성공시 0이상값 생성 후 socket descriptor 반환
 		//SOCK_STREAM : 연결 지향형 소켓
 		//AF_INET: IPv4인터넷 프로토콜
 
@@ -75,7 +76,6 @@ void server_main(){
 		//accept:연결대기 중 클라이언트의 연결 요청을 수락하는 기능 함수
 		//소켓 접속 실패시
 		perror("accept error");
-		printf("loading...\n");
 		exit(EXIT_FAILURE);
 	}
 	//printf("connected from '%s'\n",inet_ntoa(s_addr.sin_addr));

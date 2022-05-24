@@ -499,3 +499,117 @@ ls
 cd 22.05.22_dht/
 ls
 ./dht_read
+cd Documents/pjw/22.05.22_dht/
+ls
+./dht_read
+ls
+cd Documents/pjw/
+ls
+cd login/
+ls
+sudo cp login.html /var/www/html/
+sudo cp style.css /var/www/html/
+sudo cp login.html /var/www/html/
+sudo cp authenticate.php /var/www/html/
+sudo cp login.html /var/www/html/
+sudo cp authenticate.php /var/www/html/
+cd
+ls
+cd proj
+ls
+./socket
+sudo ./socket
+cd ..
+ls
+cd Documents/pjw/login/
+ls
+sudo cp authenticate.php /var/www/html/
+cd ..
+cd 
+cd proj
+ls
+sudo ./socket
+ls
+cd Documents/
+ls
+cd pjw/
+ls
+sudo chmod -R 777 dht11.c 
+sudo nano dht11.c 
+cd /var/www/html/
+ls
+sudo nano index.html 
+sudo git clone --recursive https://github.com/fethica/PHP-Login.git
+ls
+cd PHP-Login/
+ls
+cd ..
+ls
+sudo nano index.html 
+ls
+sudo nano sqlgraph
+sudo nano sqlgraph.php 
+sudo nano sqlgraph_project.php 
+ls
+sudo nano sqlgraph_project.php 
+ls
+sudo chmod -R 777 style.css 
+ls
+ls
+sudo pip3 install Adafruit_DHT
+ls
+cd project
+ls
+cd ..
+cd proj
+sudo nano dht11.c
+gcc dht11 dht11.c -lwiringPi
+gcc -o dht11 dht11.c -lwiringPi
+./dht11
+sudo ./dht11
+./dht11
+sudo nano dht11.c
+gcc -o dht11 dht11.c -lwiringPi
+./dht11
+sudo nano dht11.c
+gcc -o dht11 dht11.c -lwiringPi
+./dht11
+sudo nano dht11.c
+gcc -o dht11 dht11.c -lwiringPi
+sudo nano dht11.c
+./dht11
+sudo nano dht11.c
+gcc -o dht11 dht11.c -lwiringPi
+./dht11
+sudo nano socket_client.c
+cp socket_client2.c socket_client.c
+cp socket_client.c socket_client2.c
+ls
+sudo nano socket_client2.c
+gcc -o socket2 socket_client2.c -lwiringPi
+sudo ./socket2
+sudo nano socket_client2.c
+./dht11
+sudo nano socket_client2.c
+sudo nano dht11.c
+gcc -o dht11 dht11.c -lwiringPi
+./dht11
+sudo nano dht11.c
+gcc -o dht11 dht11.c -lwiringPi
+./dht11
+sudo nano socket_client.c
+./socket
+sudo ./socket
+sudo nano socket_client.c
+sudo ./socket
+cat /proc/device-tree/model
+sudo ./socket
+ls
+cd proj
+sudo nano socket_client.c
+gcc -o socket socket_client.c -lwiringPi
+sudo nano socket_client.c
+gcc -o socket socket_client.c -lwiringPi
+sudo nano socket_client.c
+ls
+sudo nano socket_client.c
