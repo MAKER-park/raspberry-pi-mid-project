@@ -5,7 +5,7 @@
 static char *host = "localhost";
 static char *user = "root";
 static char *pass = "raspberry";
-static char *dbname = "test";
+static char *dbname = "project";
 int main()
 {
         MYSQL *conn;
@@ -21,7 +21,7 @@ int main()
         }
         printf("Connection Successful!\n\n");
         char temp[100];
-        sprintf(temp,"select * from states");
+        sprintf(temp,"select * from tank");
         int res=mysql_query(conn,temp);
         // int res =  mysql_query(conn, "insert into states(ID,state,number)values(null, 'jeju', '064')");
         if(!res)
@@ -30,8 +30,8 @@ int main()
                 printf("retrived %lu rows\n",
                 (unsigned long)mysql_num_rows(res_ptr));
                 while((sqlrow = mysql_fetch_row(res_ptr))){
-                    printf("%10s %10s %10s\n",
-                    sqlrow[0],sqlrow[1],sqlrow[2]);
+                    printf("%10s %10s %10s %10s\n",
+                    sqlrow[0],sqlrow[1],sqlrow[2],sqlrow[3]);
                 }
 
             }

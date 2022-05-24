@@ -436,3 +436,66 @@ sudo nano socket_client.
 sudo nano socket_client.c
 gcc -o socket socket_client.c -lwiringPi
 sudo ./socket
+sudo chmod -R 777 /home/pi/Documents/pjw/
+cd Documents/pjw/22.05.19_db_conn/
+ls
+cd 
+sudo chmod -R 777 proj
+ls
+cd proj
+ls
+sudo nano socket_client2.c 
+ls
+sudo cp dht11.c ../Documents/pjw/
+cd 
+cd Documents/pjw/
+ls
+cd 22.05.22_dht/
+ls
+sudo gcc -c dht_read.c
+sudo gcc -o dht_read dht_read.o -lwiringPi
+ls
+./dht_read
+ls
+sudo gcc -o dht_read dht_read.o -lwiringPi
+sudo gcc -c dht_read.c
+sudo gcc -o dht_read dht_read.o -lwiringPi -lmariadbclient
+./dht_read
+sudo gcc -o dht_read dht_read.c -lwiringPi -lmariadbclient
+./dht_read
+sudo gcc -o dht_read dht_read.c -lwiringPi -lmariadbclient
+./dht_read
+sudo gcc -o dht_read dht_read.c -lwiringPi -lmariadbclient
+./dht_read
+sudo gcc -o dht_read dht_read.c -lwiringPi -lmariadbclient
+./dht_read
+sudo gcc -o dht_read dht_read.c -lwiringPi -lmariadbclient
+./dht_read
+sudo gcc -o dht_read dht_read.c -lwiringPi -lmariadbclient
+./dht_read
+sudo gcc -o dht_read dht_read.c -lwiringPi -lmariadbclient
+./dht_read
+sudo gcc -o dht_read dht_read.c -lwiringPi -lmariadbclient
+./dht_read
+cd ..
+cd html/
+ls
+sudo cp sqlgraph_project.php /var/www/html/
+cd ..
+ls
+cd 22.05.19_db_conn/
+ls
+sudo gcc -o read_db db.c -lmariadbclient
+ls
+./read_db 
+sudo gcc -o read_db db.c -lmariadbclient
+./read_db 
+cd ..
+cd html/
+sudo cp sqltable_project.php /var/www/html/
+sudo cp sqlgraph_project.php /var/www/html/
+cd ..
+ls
+cd 22.05.22_dht/
+ls
+./dht_read
