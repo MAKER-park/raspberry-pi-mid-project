@@ -15,11 +15,11 @@
 SoftwareSerial Serial1(6, 7); // RX, TX
 #endif
 
-char ssid[] = "iot6";            // your network SSID (name)
-char pass[] = "iot60000";        // your network password
+char ssid[] = "Twim";            // your network SSID (name)
+char pass[] = "12345678";        // your network password
 int status = WL_IDLE_STATUS;     // the Wifi radio's status
 
-char server[] = "112.145.215.121";
+char server[] = "www.google.com";
 
 // Initialize the Ethernet client object
 WiFiEspClient client;
@@ -27,7 +27,7 @@ WiFiEspClient client;
 void setup()
 {
   // initialize serial for debugging
-  Serial.begin(9600);
+  Serial.begin(115200);
   // initialize serial for ESP module
   Serial1.begin(9600);
   // initialize ESP module
@@ -56,23 +56,25 @@ void setup()
   Serial.println();
   Serial.println("Starting connection to server...");
   // if you get a connection, report back via serial
-  if (client.connect(server, 5002)) {
+  if (client.connectSSL(server, 443)) {
     Serial.println("Connected to server");
+    // Make a HTTP request
+    client.println("GET / HTTP/1.1");
+    client.println("Host: www.google.com");
+    client.println("Connection: close");
+    client.println();
   }
 }
+
 void loop()
 {
   // if there are incoming bytes available
   // from the server, read them and print them
-  char sensing[10] = {0};
-  int index = 0;
-  client.print("[1] : hello\n");
   while (client.available()) {
-   sensing[index++] = client.read();    
+    char c = client.read();
+    Serial.write(c);
   }
-  //sensing[index] = '\n';
-  Serial.println(sensing);
-  delay(1000);
+
   // if the server's disconnected, stop the client
   if (!client.connected()) {
     Serial.println();
