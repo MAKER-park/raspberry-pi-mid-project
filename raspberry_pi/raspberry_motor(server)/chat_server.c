@@ -80,6 +80,7 @@ int main(int argc, char* argv[]){
 	int serv_sock, clnt_sock;
 	struct sockaddr_in serv_adr, clnt_adr;
 	int clnt_adr_sz;
+	int on=1;
 	pthread_t t_id;
 	
 	if(wiringPiSetup()==-1) return 1;	
@@ -94,6 +95,8 @@ int main(int argc, char* argv[]){
 	
 	pthread_mutex_init(&mutx, NULL);
 	serv_sock = socket(PF_INET, SOCK_STREAM,0);
+	
+	setsockopt(serv_sock,SOL_SOCKET,SO_REUSEADDR,&on,sizeof(on));
 
 	memset(&serv_adr, 0, sizeof(serv_adr));
 	serv_adr.sin_family = AF_INET;
