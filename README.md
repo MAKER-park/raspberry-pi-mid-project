@@ -12,7 +12,8 @@
  - mysql_update
 
 # Video clip
-- link :
+- link : https://youtu.be/IyujQxBJ1rg
+
 
 # Function
 
